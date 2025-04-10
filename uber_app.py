@@ -1,6 +1,11 @@
 import pandas as pd
 import streamlit as st
 
+st.set_page_config(
+    page_title="Uber App",
+    page_icon="🚕",
+    layout="wide"
+)
 
 # Load data
 @st.cache_data
@@ -29,7 +34,7 @@ df = (
     .iloc[:nrows_selected]
 )
 
-st.title("Uber pickups en NYC")
+st.title("SUPER APP: Uber pickups en NYC")
 
 show_table = st.checkbox("Mostrar datos crudos")
 if show_table:
